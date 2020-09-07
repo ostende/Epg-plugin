@@ -10,7 +10,6 @@ def connected_to_internet(): ## to test connection
         return True
     except requests.ConnectionError:
         return False
-    print connected_to_internet()
 
 def main(session, **kwargs):
     if connected_to_internet()==True:
@@ -19,10 +18,10 @@ def main(session, **kwargs):
         session.open(MessageBox,_("No internet connection available. Or github.com Down"), MessageBox.TYPE_INFO,timeout=10)
   
 def Plugins(**kwargs):
-	return PluginDescriptor(
-			name="EPG GRABBER",
-			description="EPG WEB GRABBER BY ZIKO",
-			where = PluginDescriptor.WHERE_PLUGINMENU,
-			icon="epg.png",
-			fnc=main)
+    return PluginDescriptor(
+        name="EPG GRABBER",
+        description="EPG WEB GRABBER BY ZIKO",
+        where = PluginDescriptor.WHERE_PLUGINMENU,
+        icon="epg.png",
+        fnc=main)
 

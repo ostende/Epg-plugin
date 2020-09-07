@@ -72,8 +72,8 @@ class EPGIConfig(Screen):
   			<ePixmap position="658,55" size="60,25" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Epg_Plugin/icons/key_menu.png" alphatest="on" zPosition="5"/>
   			<widget name="key_red" position="40,520" size="140,40" valign="center" halign="center" zPosition="4" foregroundColor="#00ffffff" backgroundColor="#16000000" font="Regular;19" transparent="1"/>
   			<widget name="config" foregroundColor="#00ffffff" backgroundColor="#16000000" position="10,90" size="745,360" scrollbarMode="showOnDemand"/>
-  			<widget name="glb" foregroundColor="#00ffffff" position="15,458" size="724,28" font="Regular;24"/>
-  			<widget name="status" foregroundColor="#000080ff" position="15,487" size="724,28" font="Regular;24"/>
+  			<widget name="glb" foregroundColor="#00ffffff" backgroundColor="#16000000" position="15,458" size="724,28" font="Regular;24"/>
+  			<widget name="status" foregroundColor="#000080ff" backgroundColor="#16000000" position="15,487" size="724,28" font="Regular;24"/>
 		</screen>"""
     else:
         skin = """
@@ -95,25 +95,27 @@ class EPGIConfig(Screen):
         self.session = session
         list = []
         self.installList=[] ## New from mf to make choose list
-                                            #py    
-        list.append(("Bein Sports EPG", "0","bein"))
-        list.append(("Bein entertainment EPG", "1","beinent"))
-        list.append(("Osnplay english title arabic description BACKUP", "2","osnplay"))
-        list.append(("OSN دليل عربي بالكامل (haxer source)", "3","osnar"))
-        list.append(("OSN english only epg BACKUP (haxer source)", "4","osnen"))
-        list.append(("ELCINEMA WEBSITE EPG", "5","elcin"))
-        list.append(("ELCINEMA Bein entertainment EPG", "6","beincin"))
-        list.append(("FILFAN WEBSITE", "7","filfan"))
-        list.append(("MBC.NET/QATAR TV/NOOR DUBAI", "8","mbc"))
-        list.append(("Jawwy TV", "9","jawwy"))
-        list.append(("SNRT EPG", "10","aloula"))
-        list.append(("Aljazeera.net EPG", "11","aljazeera"))
-        list.append(("FREESAT UK", "12","freesat"))
-        list.append(("UK SPORTS CHANNELS", "13","skyuk"))
-        list.append(("DSTV.ZA", "14","dstv"))
-        list.append(("SuperSport.ZA BACKUP", "15","dstvback"))
-        list.append(("SETANTA eurasia", "16","setanta"))
-        list.append(("INDIAN SPORTS CHANNELS EPG", "17","sony"))
+                                                        #py
+        list.append(("Bein Sports connect EPG", "0","beinConnect"))
+        list.append(("Bein entertainment connect EPG", "1","beinentC"))
+        list.append(("Bein Sports.net", "2","bein"))
+        list.append(("Bein entertainment.net", "3","beinent"))
+        list.append(("Osnplay english title arabic description BACKUP", "4","osnplay"))
+        list.append(("OSN دليل عربي بالكامل (haxer source)", "5","osnar"))
+        list.append(("OSN english only epg BACKUP (haxer source)", "6","osnen"))
+        list.append(("ELCINEMA WEBSITE EPG", "7","elcin"))
+        list.append(("ELCINEMA Bein entertainment EPG", "8","beincin"))
+        list.append(("MBC.NET/QATAR TV/NOOR DUBAI", "9","mbc"))
+        list.append(("Jawwy TV", "10","jawwy"))
+        list.append(("SNRT EPG", "11","aloula"))
+        list.append(("Aljazeera.net ar EPG", "12","aljazeera"))
+        list.append(("SKY IT EPG", "13","skyit"))
+        list.append(("FREESAT UK", "14","freesat"))
+        list.append(("UK SPORTS CHANNELS", "15","skyuk"))
+        list.append(("DSTV.ZA", "16","dstv"))
+        list.append(("SuperSport.ZA BACKUP", "17","dstvback"))
+        list.append(("SETANTA eurasia", "18","setanta"))
+        list.append(("INDIAN SPORTS CHANNELS EPG", "19","sony"))
         self.provList=list ## New from mf to make choose list
         Screen.__init__(self, session)
         self.skinName = ["EPGIConfig"]
